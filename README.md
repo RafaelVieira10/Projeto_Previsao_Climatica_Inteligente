@@ -1,8 +1,8 @@
 # PREVISÃO CLIMÁTICA INTELIGENTE (PCI)
 
 ## Equipe
-- Rafael Vieira Dos Santos — RA: [2224109067]
-- Ederson Silva Ribeiro Mota — RA: [2224105760]
+- Rafael Vieira Dos Santos — RA: 2224109067
+- Ederson Silva Ribeiro Mota — RA: 2224105760
   
 - Turma: Turma 41 - SA | Curso: Ciência da Computação | Período: Noturno | Ano: 2025
 
