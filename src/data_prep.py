@@ -1,5 +1,4 @@
-# src/data_prep.py
-
+# Bibliotecas
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
@@ -20,12 +19,9 @@ def load_and_preprocess_data(random_seed=42):
     """
     Carrega o dataset, renomeia as colunas para português, pré-processa,
     salva a versão processada e divide os dados em treino e teste.
-    
-    O caminho do arquivo é calculado DE FORMA ABSOLUTA RELATIVA AO SCRIPT (src/data_prep.py)
-    para garantir reprodutibilidade, independente do CWD do terminal.
     """
     
-    # === FIX PARA REPRODUTIBILIDADE: Cálculo do caminho de dados ===
+
     # 1. Obtém o diretório do script atual (Ex: /caminho/para/PROJETO_IA/src)
     base_dir = os.path.dirname(os.path.abspath(__file__)) 
     # 2. Sobe um nível (para a raiz do projeto)
@@ -40,10 +36,8 @@ def load_and_preprocess_data(random_seed=42):
     os.makedirs(processed_dir, exist_ok=True) 
     # ====================================================================
 
-    print(f"DEBUG: Caminho de dados resolvido para: {file_path}") # Mensagem de debug útil para o professor
-    
+    # Mensagem de alerta caso não encontre o arquivo
     if not os.path.exists(file_path):
-        # Esta mensagem de erro agora é muito mais clara sobre onde o problema está, se houver
         raise FileNotFoundError(
             f"Arquivo não encontrado em {file_path}. "
             "Certifique-se de que o 'temperature_dataset.csv' está em 'data/raw/' "
@@ -55,7 +49,7 @@ def load_and_preprocess_data(random_seed=42):
     # Renomeia as colunas
     data = data.rename(columns=COL_MAPPING)
 
-    # 1. Limpeza/Seleção
+    # 1. Limpeza
     required_cols = list(COL_MAPPING.values())
     data = data.dropna(subset=required_cols)
     

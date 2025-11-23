@@ -1,5 +1,4 @@
-# src/main.py
-
+#Bibliotecas
 import argparse
 from data_prep import load_and_preprocess_data
 from train import train_model
@@ -18,12 +17,11 @@ def run_pipeline(random_seed=42):
     # 1. Preparação dos Dados
     print("\n--- 2. PREPARAÇÃO DE DADOS (src/data_prep.py) ---")
 
-    # CORREÇÃO AQUI: Removemos o argumento file_path, pois ele é resolvido internamente.
+    #Carregando os dados.
     X_train, X_test, y_train, y_test, scaler = load_and_preprocess_data(random_seed=random_seed)
     
     # 2. Treinamento do Modelo
     print("\n--- 3. TREINAMENTO DO MODELO (src/train.py) ---")
-    # O modelo de regressão não precisa de um caminho de modelo fixo, mas mantemos para consistência
     train_model(X_train, y_train) 
     
     # 3. Avaliação e Resultados

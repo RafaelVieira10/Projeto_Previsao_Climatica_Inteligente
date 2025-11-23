@@ -1,7 +1,4 @@
-# Treinamento do modelo (Regressão Linear/SVR)
-
-# src/train.py
-
+#Bibliotecas
 from sklearn.linear_model import LinearRegression
 from joblib import dump
 import os
@@ -32,6 +29,6 @@ if __name__ == '__main__':
     if not os.path.exists('data/raw/temperature_dataset.csv'):
         print("Primeiro, execute o main.py ou data_prep.py para gerar os dados.")
     else:
-        # Carrega os dados de treino (sempre com a semente fixa)
+        # Carrega os dados de treino
         X_train, _, y_train, _, _ = load_and_preprocess_data(random_seed=42)
         train_model(X_train, y_train)

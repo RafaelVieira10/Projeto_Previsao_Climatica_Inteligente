@@ -1,5 +1,4 @@
-# src/evaluate.py
-
+#Bibliotecas
 from joblib import load
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 import matplotlib.pyplot as plt
@@ -29,7 +28,7 @@ def calculate_metrics(y_test, predictions):
     return rmse, mae
 
 def generate_plots(y_test, predictions, X_test, save_dir='reports/figures'):
-    """Gera e salva os três gráficos de desempenho em português."""
+    """Gera e salva os três gráficos de desempenho."""
     
     os.makedirs(save_dir, exist_ok=True)
     y_test = y_test.reset_index(drop=True) 
@@ -70,7 +69,7 @@ def generate_plots(y_test, predictions, X_test, save_dir='reports/figures'):
     plt.savefig(os.path.join(save_dir, 'serie_temporal_comparacao.png'))
     plt.close()
 
-    print(f"Três gráficos gerados e salvos em português em: {save_dir}/")
+    print(f"Três gráficos gerados e salvos em: {save_dir}/")
     
 def evaluate(X_test, y_test):
     """Pipeline de avaliação do modelo."""
@@ -95,6 +94,6 @@ if __name__ == '__main__':
     elif not os.path.exists('data/raw/temperature_dataset.csv'):
          print("Dataset não encontrado em data/raw/. Não foi possível testar a avaliação.")
     else:
-        # Carrega os dados de teste (sempre com a semente fixa)
+        # Carrega os dados de teste
         _, X_test, _, y_test, _ = load_and_preprocess_data(random_seed=42)
         evaluate(X_test, y_test)
