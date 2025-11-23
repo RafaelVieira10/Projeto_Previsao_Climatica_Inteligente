@@ -3,7 +3,8 @@
 ## Equipe
 - Rafael Vieira Dos Santos — RA: [2224109067]
 - Ederson Silva Ribeiro Mota — RA: [2224105760]
-Turma: Turma 41 - SA | Curso: Ciência da Computação | Período: Noturno | Ano: 2025
+  
+- Turma: Turma 41 - SA | Curso: Ciência da Computação | Período: Noturno | Ano: 2025
 
 ## Problema
 O objetivo deste projeto é prever a temperatura máxima diária com base em variáveis climáticas históricas (como umidade e pressão atmosférica). A previsão precisa é essencial para o planejamento logístico e econômico em setores sensíveis ao clima, visando minimizar o erro de estimativa.
