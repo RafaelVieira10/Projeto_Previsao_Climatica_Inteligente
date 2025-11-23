@@ -1,9 +1,9 @@
 # PREVISÃO CLIMÁTICA INTELIGENTE (PCI)
 
 ## Equipe
-- Rafael Vieira Dos Santos — RA: [2224109067]
-- Ederson Silva Ribeiro Mota — RA: [2224105760]
-Turma: Turma 41 - SA | Curso: Ciência da Computação | Período: Noturno | Ano: 2025
+- Rafael Vieira Dos Santos — RA: 2224109067
+- Ederson Silva Ribeiro Mota — RA: 2224105760
+- Turma: Turma 41 - SA | Curso: Ciência da Computação | Período: Noturno | Ano: 2025
 
 ## Problema
 O objetivo deste projeto é prever a temperatura máxima diária com base em variáveis climáticas históricas (como umidade e pressão atmosférica). A previsão precisa é essencial para o planejamento logístico e econômico em setores sensíveis ao clima, visando minimizar o erro de estimativa.
@@ -26,20 +26,20 @@ Siga os passos abaixo para instalar e executar o projeto.
 
 ```bash
 # 1. Clone o repositório
-git clone [Link do seu repositório]
-cd PROJETO_IA_PREVISÃO_DE_TEMPERATURA
+git clone https://github.com/RafaelVieira10/Projeto_Previsao_Climatica_Inteligente.git
+cd Projeto_Previsao_Climatica_Inteligente
 
-# 2. Crie e ative um ambiente virtual (recomendado)
+# 2. Criar e ative um ambiente virtual (recomendado)
 python -m venv .venv
 # Windows
 .\.venv\Scripts\activate
 # Linux/macOS
 source .venv/bin/activate
 
-# 3. Instale as dependências
+# 3. Instalar as dependências
 pip install -r requirements.txt
 
-# 4. Execute o pipeline completo (pré-processamento, treino, avaliação)
+# 4. Executar o pipeline completo (pré-processamento, treino, avaliação)
 # O script irá: 
 # a) processar os dados em data/raw/
 # b) treinar o modelo e salvar em models/
