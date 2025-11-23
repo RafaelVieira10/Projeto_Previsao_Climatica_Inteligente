@@ -26,20 +26,20 @@ Siga os passos abaixo para instalar e executar o projeto.
 
 ```bash
 # 1. Clone o repositório
-git clone [Link do seu repositório]
+git clone https://github.com/RafaelVieira10/Projeto_Previsao_Climatica_Inteligente.git
 cd PROJETO_IA_PREVISÃO_DE_TEMPERATURA
 
-# 2. Crie e ative um ambiente virtual (recomendado)
+# 2. Criar e ativar um ambiente virtual.
 python -m venv .venv
 # Windows
 .\.venv\Scripts\activate
 # Linux/macOS
 source .venv/bin/activate
 
-# 3. Instale as dependências
+# 3. Instalar as dependências
 pip install -r requirements.txt
 
-# 4. Execute o pipeline completo (pré-processamento, treino, avaliação)
+# 4. Executar o pipeline completo (pré-processamento, treino, avaliação)
 # O script irá: 
 # a) processar os dados em data/raw/
 # b) treinar o modelo e salvar em models/
