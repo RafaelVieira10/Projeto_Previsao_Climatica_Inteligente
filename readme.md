@@ -33,9 +33,9 @@ cd Projeto_Previsao_Climatica_Inteligente
 # Windows
 python -m venv .venv
 .\.venv\Scripts\activate
-    OBS: Caso apareça erro de não poder executar scripts, rodar o seguinte comando no powershell, modo elevado (Administrador):
+   # OBS: Caso apareça erro de não poder executar scripts, rodar o seguinte comando no powershell, modo elevado (Administrador):
     Set-ExecutionPolicy Unrestricted - # Habilitar scripts no PowerShell
-    A ou S para confirmar a ativação da execução de Scripts.
+    # A ou S para confirmar a ativação da execução de Scripts.
 # Linux/macOS
 source .venv/bin/activate
 
@@ -55,4 +55,4 @@ python src/main.py --seed 42
 
 # 5. Abrir gráficos gerados:
 cd reports\figures
-explorer . ou code .
+'explorer .' #ou   'code .'
