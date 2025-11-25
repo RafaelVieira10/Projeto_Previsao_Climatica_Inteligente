@@ -30,9 +30,12 @@ git clone https://github.com/RafaelVieira10/Projeto_Previsao_Climatica_Inteligen
 cd Projeto_Previsao_Climatica_Inteligente
 
 # 2. Criar e ative um ambiente virtual (recomendado)
-python -m venv .venv
 # Windows
+python -m venv .venv
 .\.venv\Scripts\activate
+    OBS: Caso apareça erro de não poder executar scripts, rodar o seguinte comando no powershell, modo elevado (Administrador):
+    Set-ExecutionPolicy Unrestricted - # Habilitar scripts no PowerShell
+    A ou S para confirmar a ativação da execução de Scripts.
 # Linux/macOS
 source .venv/bin/activate
 
@@ -46,5 +49,10 @@ pip install -r requirements.txt
 # c) calcular métricas, gerar gráficos e salvar em reports/
 python src/main.py --seed 42
 
+
 # Em seguida, executar o exploratory.ipynb, para ánalise dos dados
     # caminho: notebooks\exploratory.ipynb
+
+# 5. Abrir gráficos gerados:
+cd reports\figures
+explorer . ou code .
