@@ -55,4 +55,5 @@ python src/main.py --seed 42
 
 # 5. Abrir gráficos gerados:
 cd reports\figures
-'explorer .' #ou   'code .'
+explorer . # - Abrir diretório no Windows Explorer 
+code .  # - Abrir diretório no Visual Studio Code 
