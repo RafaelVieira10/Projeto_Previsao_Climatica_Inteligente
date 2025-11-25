@@ -28,6 +28,7 @@ Siga os passos abaixo para instalar e executar o projeto.
 # 1. Clone o repositório
 git clone https://github.com/RafaelVieira10/Projeto_Previsao_Climatica_Inteligente.git
 cd Projeto_Previsao_Climatica_Inteligente
+code . # Abrir projeto no Visual Studio Code
 
 # 2. Criar e ative um ambiente virtual (recomendado)
 # Windows
@@ -55,5 +56,5 @@ python src/main.py --seed 42
 
 # 5. Abrir gráficos gerados:
 cd reports\figures
-explorer . # - Abrir diretório no Windows Explorer 
-code .  # - Abrir diretório no Visual Studio Code 
+explorer . # - Abrir diretório dos gráficos no Windows Explorer 
+code .  # - Abrir diretório dos gráficos no Visual Studio Code 
