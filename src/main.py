@@ -5,7 +5,7 @@ from train import train_model
 from evaluate import evaluate
 import os
 
-def run_pipeline(random_seed=42):
+def  run_pipeline(random_seed=42):
     """
     Executa o pipeline completo:
     1. Prepara os dados

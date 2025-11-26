@@ -7,7 +7,7 @@ import os
 import sys
 
 # Dicionário de Mapeamento de Nomes (Inglês -> Português)
-COL_MAPPING = {
+colunas = {
     'Temperature (C)': 'Temp_Real', 
     'Apparent Temperature (C)': 'Temp_Aparente', 
     'Humidity': 'Umidade', 
@@ -40,41 +40,41 @@ def load_and_preprocess_data(random_seed=42):
     if not os.path.exists(file_path):
         raise FileNotFoundError(
             f"Arquivo não encontrado em {file_path}. "
-            "Certifique-se de que o 'temperature_dataset.csv' está em 'data/raw/' "
+            "Certifique-se de que o 'temperature_dataset.csv' está em 'dados/raw/' "
             "e que a estrutura de pastas está correta."
         )
 
-    data = pd.read_csv(file_path)
+    dados = pd.read_csv(file_path)
 
     # Renomeia as colunas
-    data = data.rename(columns=COL_MAPPING)
+    dados = dados.rename(columns=colunas)
 
     # 1. Limpeza
-    required_cols = list(COL_MAPPING.values())
-    data = data.dropna(subset=required_cols)
+    required_cols = list(colunas.values())
+    dados = dados.dropna(subset=required_cols)
     
-    # 2. Definir Features (X) e Target (Y)
-    target = 'Temp_Real' 
-    features = [
+    # 2. Definir caracteristicas (X) e alvo (Y)
+    alvo = 'Temp_Real' 
+    caracteristicas = [
         'Temp_Aparente', 
         'Umidade', 
         'Velocidade_Vento', 
         'Pressao_Atmosferica',
     ]
     
-    X = data[features]
-    y = data[target]
+    X = dados[caracteristicas]
+    y = dados[alvo]
 
     # 3. Normalização (Escalamento)
     scaler = MinMaxScaler()
     X_scaled = scaler.fit_transform(X)
-    X_scaled_df = pd.DataFrame(X_scaled, columns=features)
+    X_scaled_df = pd.DataFrame(X_scaled, columns=caracteristicas)
     
     # 4. SALVAR DADOS PROCESSADOS
-    processed_data = X_scaled_df.copy()
-    processed_data[target] = y.values
+    dados_processados = X_scaled_df.copy()
+    dados_processados[alvo] = y.values
     
-    processed_data.to_csv(processed_file_path, index=False)
+    dados_processados.to_csv(processed_file_path, index=False)
     print(f"Dados processados (escalados e renomeados) salvos em: {processed_file_path}")
     
     # 5. Divisão Treino/Teste (80/20)
